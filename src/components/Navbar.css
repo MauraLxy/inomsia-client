@@ -1,0 +1,137 @@
+.navbar {
+  padding: 10px 40px;
+  font-family: 'labrada', 'Georgia', serif;
+  background-color: #f4f4f4;
+}
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.works-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item-title {
+  cursor: pointer;
+  color: #07553D;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 0.5rem 0;
+  list-style: none;
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 14px;
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown li:hover {
+  background-color: #555;
+}
+
+/* Set a gradient line under the navbar. */
+.navbar-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #276C52 0%,
+    #CCD4C0 45%,
+    #FDDAA4 60%,
+    #D1AE79 100%
+  );
+}
+/* Set a small decoration at the end of the line. */
+.navbar-content::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #D1AE79;
+  transform: rotate(45deg);
+}
+.logo img {
+  height: 60px;
+  object-fit: contain;
+}
+.logo :hover {
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 18px;
+  color: #07553D;
+  margin-block-end: 10px;
+  position: relative;
+}
+/* Set a menu button to appear when using a small screen. */
+.menu-button {
+  display: none; /* hidden as default */
+  background-color: #f4f4f4;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #D1AE79;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+}
+/* The menu will appear when the user accesses the webpage using a phone. */
+@media (max-width: 767px) {
+  .menu-button {
+    display: block;
+  }
+  /* Set the style of the menu content. */
+  .nav-links {
+    display: none; /* default hide the original menu content */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    gap: 20px;
+    z-index: 1000;
+  }
+  /* Show the menu content when clicking the menu button. */
+  .nav-links.open {
+    display: flex;
+  }
+}
+/* Set some space between the logo, menu and the left/right end of the line. Only for PC. */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 10px 10%;
+  }
+  .nav-links {
+    padding-right: 5%;
+  }
+  .logo {
+    padding-left: 1%;
+  }
+}

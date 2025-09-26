@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: 'labrada', 'Georgia', serif;
+}
+
+.home {
+  text-align: center;
+}
+.islands {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+  align-items: flex-start;  
+  margin-left: 30vw;
+}
+
+.second-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.island {
+  height: auto;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.island:hover {
+  filter: drop-shadow(0 0 8px #39795E) drop-shadow(0 0 15px #61A6A9);
+  transform: scale(1.05);
+}
+
+.island1 {
+  margin-top: 10vh;
+  width: 10vw;
+}
+
+.island2 {
+  width: 30vw;
+}
+
+.island3 {
+  width: 40vw;
+  margin-top: -20px;
+}
+
+
+.banner {
+  background-color: #39795E;
+  padding: 10px 0 20px 0;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px gray;
+}
+.title {
+  font-size: 22px;
+  color: #f4f4f4;
+}
+.banner-text {
+  padding: 0 10%;
+  color: #f4f4f4;
+  text-align: left;
+  font-size: 18px;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 320px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+@media (min-width:1024px) {
+  .card{
+    width: 25vw;
+    height: 50vh;
+  }
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-text {
+  position: absolute;
+  bottom: 40%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  padding: 14px 10px;
+}
