@@ -1,3 +1,4 @@
 # inomsia-client
-A website 
+My own website project. Click [HERE](https://www.inomsia.com) to view it.
+
 
