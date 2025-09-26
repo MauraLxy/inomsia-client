@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 export default function WriteDiary() {
   const [type, setType] = useState('journal');
-  const [mood, setMood] = useState('😊');
   const [date, setDate] = useState(() => {
     const today = new Date();
     return today.toISOString().split('T')[0];
@@ -62,11 +61,6 @@ export default function WriteDiary() {
                 onChange={(e) => setDate(e.target.value)}
                 />
             </div>
-        </div>
-
-        <div className="form-row">
-          <label>Mood</label>
-          <div>{mood}</div>
         </div>
 
         <div className="form-row align-top">
