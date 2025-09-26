@@ -28,7 +28,7 @@ export default function WriteDiary() {
         });
 
         if (res.ok) {
-        const data = await res.json();
+        // const data = await res.json();
         alert("✅ Diary published!");
         setContent(""); // reset input
         } else {
